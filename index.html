@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>Spotify Web Clone</title>
+
+  <!-- Tailwind -->
+  <link href="./output.css" rel="stylesheet">
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-black text-white font-[Inter] h-screen overflow-hidden">
+
+  <!-- APP -->
+  <div class="flex h-full pb-[90px]">
+
+    <!-- SIDEBAR -->
+    <aside class="hidden xl:block w-[300px] bg-[#121212] border-l border-[#282828] p-4">
+
+      <h1 class="text-xl font-bold">Spotify</h1>
+
+      <!-- NAV -->
+      <nav class="space-y-4 text-sm font-semibold">
+        <a class="flex items-center gap-4 text-white">
+          <span>🏠</span> Home
+        </a>
+        <a class="flex items-center gap-4 text-[#b3b3b3] hover:text-white">
+          <span>🔍</span> Search
+        </a>
+        <a class="flex items-center gap-4 text-[#b3b3b3] hover:text-white">
+          <span>📚</span> Your Library
+        </a>
+      </nav>
+
+      <!-- PLAYLISTS -->
+      <div class="border-t border-[#282828] pt-4 text-sm text-[#b3b3b3] space-y-2">
+        <p class="hover:text-white cursor-pointer">Liked Songs</p>
+        <p class="hover:text-white cursor-pointer">AMAPIANO GROOVES</p>
+        <p class="hover:text-white cursor-pointer">Afrobeats Mix</p>
+        <p class="hover:text-white cursor-pointer">Tom Odell</p>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="flex-1 bg-gradient-to-b from-[#1f1f1f] to-[#121212] overflow-y-auto">
+
+      <!-- TOPBAR -->
+      <div class="sticky top-0 z-30 bg-black/70 backdrop-blur-md px-6 py-3 flex items-center gap-4">
+
+        <button class="w-8 h-8 bg-[#2a2a2a] rounded-full flex items-center justify-center">
+          🏠
+        </button>
+
+        <!-- SEARCH -->
+        <div class="flex-1 max-w-xl bg-[#2a2a2a] rounded-full px-4 py-2 flex items-center gap-3 text-sm text-[#b3b3b3]">
+          🔍
+          <input
+            type="text"
+            placeholder="What do you want to play?"
+            class="bg-transparent outline-none flex-1 text-white placeholder-[#b3b3b3]"
+          />
+        </div>
+
+        <div class="flex items-center gap-4 ml-auto">
+          <button class="text-sm text-white">Install App</button>
+          <div class="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center font-bold">
+            E
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTENT -->
+      <section class="px-6 pt-6 pb-10">
+
+        <!-- GOOD MORNING -->
+        <h2 class="text-2xl font-bold mb-4">Good Morning</h2>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+          <div class="flex items-center bg-[#2a2a2a] rounded-md overflow-hidden hover:bg-[#3a3a3a] transition">
+            <div class="w-20 h-20 bg-gray-600"></div>
+            <span class="px-4 font-semibold">Nada será como antes</span>
+          </div>
+          <div class="flex items-center bg-[#2a2a2a] rounded-md overflow-hidden hover:bg-[#3a3a3a] transition">
+            <div class="w-20 h-20 bg-gray-600"></div>
+            <span class="px-4 font-semibold">Liked Songs</span>
+          </div>
+          <div class="flex items-center bg-[#2a2a2a] rounded-md overflow-hidden hover:bg-[#3a3a3a] transition">
+            <div class="w-20 h-20 bg-gray-600"></div>
+            <span class="px-4 font-semibold">AMAPIANO GROOVES</span>
+          </div>
+        </div>
+
+        <!-- SECTION -->
+        <div class="mt-12">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-bold">It’s New Music Friday!</h2>
+            <span class="text-sm text-[#b3b3b3] hover:underline cursor-pointer">
+              Show all
+            </span>
+          </div>
+
+          <div class="grid gap-6 [grid-template-columns:repeat(auto-fill,minmax(180px,1fr))]">
+            <!-- CARD -->
+            <div class="bg-[#181818] p-4 rounded-md hover:bg-[#282828] transition cursor-pointer">
+              <div class="aspect-square bg-gray-600 rounded-md mb-4"></div>
+              <h3 class="font-semibold text-sm">Release Radar</h3>
+              <p class="text-xs text-[#b3b3b3] mt-1">Catch all the latest music</p>
+            </div>
+
+            <div class="bg-[#181818] p-4 rounded-md hover:bg-[#282828] transition cursor-pointer">
+              <div class="aspect-square bg-gray-600 rounded-md mb-4"></div>
+              <h3 class="font-semibold text-sm">New Music Friday</h3>
+              <p class="text-xs text-[#b3b3b3] mt-1">The best of new releases</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <!-- RIGHT BAR -->
+    <aside class="w-[300px] bg-[#121212] border-l border-[#282828] p-4 hidden xl:block">
+      <h3 class="font-bold mb-4">Nada será como antes</h3>
+      <div class="aspect-square bg-gray-700 rounded-md mb-4"></div>
+      <p class="text-sm text-[#b3b3b3]">About the artist</p>
+    </aside>
+
+  </div>
+
+  <!-- PLAYER -->
+  <footer class="fixed bottom-0 left-0 right-0 h-[90px] bg-[#181818] border-t border-[#282828] flex items-center justify-between px-6">
+
+    <div>
+      <p class="font-semibold text-sm">Song Name</p>
+      <p class="text-xs text-[#b3b3b3]">Artist</p>
+    </div>
+
+    <div class="flex items-center gap-4">
+      ⏮
+      <div class="w-10 h-10 bg-white rounded-full text-black flex items-center justify-center">
+        ▶
+      </div>
+      ⏭
+    </div>
+
+    <div class="w-32 h-1 bg-[#404040] rounded"></div>
+
+  </footer>
+
+</body>
+</html>
